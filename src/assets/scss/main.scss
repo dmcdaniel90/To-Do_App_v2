@@ -1,0 +1,80 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+$container-max-widths: (
+  sm: 400px,
+  md: 520px,
+  lg: 680px,
+  xl: 800px,
+  xxl: 880px,
+);
+
+$theme-colors: (
+  'primary': #4f709c,
+  'secondary': #d8c4b6,
+  'success': #28a745,
+  'info': #17a2b8,
+  'warning': #ffc107,
+  'danger': #dc3545,
+  'light': #f8f9fa,
+  'dark': #343a40,
+);
+
+//override button font-weight
+$btn-font-weight: bold;
+
+.col {
+  padding: 0;
+
+  @include media-breakpoint-up(md) {
+    padding: 0.2rem;
+  }
+}
+
+@import '~bootstrap/scss/bootstrap';
+
+#app {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+li {
+  font-size: 1.2rem;
+  font-weight: bold;
+  list-style: none;
+  margin-bottom: 10px;
+  color: #030303;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input[type='checkbox'] {
+  width: 20px;
+  height: 20px;
+}
+
+.delete {
+  background-color: red;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 50%;
+  padding: 5px 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.complete {
+  text-decoration: line-through;
+  color: green;
+  border: none;
+  cursor: pointer;
+}
