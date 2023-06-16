@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./src/assets/scss/main.scss">
+</head>
+<body>
+  <div id="app" class="container">
+      <h1>To-Do App</h1>
+      <input type="text" placeholder="Add a new task..." id="taskInput" class="form-control"/>
+      <div class="buttonBar">
+        <button class="btn btn-primary"id="addTaskButton" aria-label="Add Task">Add Task</button>
+        <button class="btn btn-secondary" id="toggleShowCompleted" aria-label="Toggle Completed Tasks">
+          Hide Completed
+        </button>
+        <button class="btn-secondary" id="clearCompletedButton" aria-label="Clear Completed Tasks">
+          Clear Completed
+        </button>
+        <button class="btn-danger" id="clearAllButton" aria-label="Clear All Tasks">
+          Clear All
+        </button>
+      </div>
+
+      <ul id="taskList">
+        <!--====== TASKS GENERATED HERE ======-->
+      </ul>
+    </div>
+    <script type="module" src="./src/assets/js/main.js"></script>
+</body>
+</html>
