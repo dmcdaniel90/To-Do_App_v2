@@ -10,8 +10,9 @@ $(document).ready(function () {
       $('#taskList').append(
         `<li class="taskItem"><input type="checkbox" class="checkbox">${capitalizeFirstLetter(
           task
-        )}<button class="delete">X</button></li>`
+        )}<input type="date" class="form-control-sm" id="dueDate" name="dueDate" placeholder="Due Date"><button class="delete">X</button></li>`
       );
+
       $('#taskInput').val('');
       updateStorage();
       $('#taskInput').focus();
@@ -40,7 +41,9 @@ $(document).ready(function () {
   //function to toggle a task as complete
   function toggleComplete() {
     $(this).parent().toggleClass('complete');
+
     updateStorage();
+    $('#taskInput').focus();
   }
 
   //function to clear all tasks
@@ -106,3 +109,15 @@ $(document).ready(function () {
 
   loadStorage();
 });
+
+//a function to get the current date and display it in the footer
+function displayDate() {
+  const date = new Date();
+  const day = date.getDate();
+  const month = date.getMonth() + 1;
+  const year = date.getFullYear();
+
+  $('#currentDate').text(`Today is ${month}/${day}/${year}`);
+}
+
+displayDate();

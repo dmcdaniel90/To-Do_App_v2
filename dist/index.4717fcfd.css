@@ -13219,6 +13219,13 @@ input[type="checkbox"] {
   height: 20px;
 }
 
+.complete {
+  color: green;
+  cursor: pointer;
+  border: none;
+  text-decoration: line-through;
+}
+
 .delete {
   color: #fff;
   cursor: pointer;
@@ -13231,14 +13238,8 @@ input[type="checkbox"] {
   width: 30px;
   height: 30px;
   padding: 5px 10px;
+  text-decoration: none;
   display: flex;
-}
-
-.complete {
-  color: green;
-  cursor: pointer;
-  border: none;
-  text-decoration: line-through;
 }
 
 /*# sourceMappingURL=index.4717fcfd.css.map */

@@ -57,6 +57,13 @@ input[type='checkbox'] {
   height: 20px;
 }
 
+.complete {
+  text-decoration: line-through;
+  color: green;
+  border: none;
+  cursor: pointer;
+}
+
 .delete {
   background-color: red;
   color: #fff;
@@ -70,11 +77,5 @@ input[type='checkbox'] {
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-.complete {
-  text-decoration: line-through;
-  color: green;
-  border: none;
-  cursor: pointer;
+  text-decoration: none;
 }

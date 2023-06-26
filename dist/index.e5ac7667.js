@@ -581,7 +581,7 @@ $(document).ready(function() {
     function addTask() {
         const task = $("#taskInput").val();
         if (task !== "") {
-            $("#taskList").append(`<li class="taskItem"><input type="checkbox" class="checkbox">${capitalizeFirstLetter(task)}<button class="delete">X</button></li>`);
+            $("#taskList").append(`<li class="taskItem"><input type="checkbox" class="checkbox">${capitalizeFirstLetter(task)}<input type="date" class="form-control-sm" id="dueDate" name="dueDate" placeholder="Due Date"><button class="delete">X</button></li>`);
             $("#taskInput").val("");
             updateStorage();
             $("#taskInput").focus();
@@ -607,6 +607,7 @@ $(document).ready(function() {
     function toggleComplete() {
         $(this).parent().toggleClass("complete");
         updateStorage();
+        $("#taskInput").focus();
     }
     //function to clear all tasks
     function clearAll() {
@@ -656,6 +657,15 @@ $(document).ready(function() {
     });
     loadStorage();
 });
+//a function to get the current date and display it in the footer
+function displayDate() {
+    const date = new Date();
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
+    $("#currentDate").text(`Today is ${month}/${day}/${year}`);
+}
+displayDate();
 
 },{}]},["glH8k","aitAD"], "aitAD", "parcelRequiref707")
 
